@@ -1,0 +1,34 @@
+<h1>Students</h1>
+
+<form action="/students">
+  <input placeholder="search for students" name="search">
+</form>
+
+
+<p><a href="/new_student">Add a New Student</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @students.each do |student| %>
+    <tr>
+          <td><%= student.name %></td>
+          <td><%= student.email %></td>
+          <td><a href="/students/<%= student.id %>">Show</a>
+        </td>
+      <td><a href="/students/<%= student.id %>/edit">Edit</a></td>
+      <td><a href="/students/<%= student.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

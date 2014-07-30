@@ -1,0 +1,13 @@
+<h1>Student #<%= @student.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @student.name %></p>
+</div>
+<div>
+  <strong>Email</strong>:<br />
+  <p><%= @student.email %></p>
+</div>
+
+<a href="/students/<%= @student.id %>/edit">Edit</a> |
+<a href="/students/<%= @student.id %>/destroy">Destroy</a>
